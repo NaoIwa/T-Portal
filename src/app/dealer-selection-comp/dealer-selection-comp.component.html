@@ -1,0 +1,22 @@
+<app-selection-comp></app-selection-comp>
+<h2>Dealer Login</h2>
+
+<form [formGroup] = "loginDetails" (ngSubmit) = "loginValidate(loginDetails.value)">
+    <div>
+        <label>
+            Phone No. 
+            <input type="tel" formControlName="phone" />
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Password 
+            <input type="password" formControlName = "password" />
+        </label>
+    </div>
+
+    <button type="submit">Login</button>
+</form>
+
+<h3>Wanna join T-Portal ?<a routerLink = "/dealerSignUp">Sign Up</a> now </h3>

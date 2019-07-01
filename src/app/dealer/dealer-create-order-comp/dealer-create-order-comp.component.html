@@ -1,0 +1,38 @@
+<h2>Create New Order</h2>
+
+<div>
+    <label>
+        Date : {{date}}
+    </label>
+</div>
+
+<div>
+    <label>
+        Location : {{location}}
+    </label>
+</div>
+
+<div>
+    <label>
+        Subscription Copies : 20
+    </label>    
+</div>
+
+<form [formGroup] = "formDetails" (ngSubmit) = "createOrder(formDetails.value)">
+    <div>
+        <label>
+            Edition : 
+            <input type="search" formControlName = "edition" />
+        </label>
+    </div>
+    <div>
+        <label>
+            Trade Copies :
+            <input type="number" formControlName = "copies" />
+        </label>
+    </div>
+    
+    <div>
+        <button type = "submit">ORDER</button>
+    </div>
+</form>

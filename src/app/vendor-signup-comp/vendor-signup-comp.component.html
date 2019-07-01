@@ -1,0 +1,43 @@
+<app-selection-comp></app-selection-comp>
+<h2>Vendor Sign Up</h2>
+
+<form [formGroup] = "signUpDetails" (ngSubmit) = "verifyDetails(signUpDetails.value)">
+    <div>
+        <label>Date of Signing Up : {{today_date}}</label>    
+    </div>
+
+    <div>
+        <label>Location : </label>    
+        <input type="search" formControlName = "location"/>
+    </div>
+
+    <div>
+        <label>Full Name : </label>
+        <input type="text" formControlName = "name"/>
+    </div>
+
+    <div>
+        <label>
+            Phone Number :
+        </label>
+        <input type="tel" formControlName = "phone"/>
+    </div>
+
+    <div>
+        <label>Date of Birth :</label>
+        <input type="date" formControlName = "dob"/>
+    </div>
+
+    <div>
+        <label>Password :</label>
+        <input type="password" formControlName = "password" />
+    </div>
+
+    <div>
+        <button type="submit">Send OTP</button>
+    </div>
+</form>
+
+<div>
+    Already have an account ? <a routerLink = "/vendorSelection">Sign In</a> from here.
+</div>

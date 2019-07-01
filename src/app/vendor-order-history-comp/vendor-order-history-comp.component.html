@@ -1,0 +1,8 @@
+<h2>Your Order History</h2>
+
+<div *ngFor = "let order of orders">
+    Edition : {{order.edition}} <br/>
+    Trade Copies : {{order.copies}} <br/>
+    Date : {{order.date | date}} <br/><br/><br/>
+
+</div>
